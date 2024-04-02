@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Grid, Paper } from "@mui/material"
 import { styled } from '@mui/material/styles';
+import SideBar from './SideBar'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -28,20 +29,15 @@ function App() {
   // Support: HelpIcon or LiveHelpIcon
   // Privacy: PrivacyTipIcon or SecurityIcon
   return (
-    <><Grid container spacing={2}>
-      <Grid item xs={8}>
-        <Item>xs=8</Item>
+    <>
+      <Grid container >
+        <Grid item xs={4}>
+          <SideBar />
+        </Grid>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
       </Grid>
-      <Grid item xs={4}>
-        <Item>xs=4</Item>
-      </Grid>
-      <Grid item xs={4}>
-        <Item>xs=4</Item>
-      </Grid>
-      <Grid item xs={8}>
-        <Item>xs=8</Item>
-      </Grid>
-    </Grid>
     </>
   )
 }
