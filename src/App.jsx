@@ -19,15 +19,6 @@ function App() {
     "Settings", "Support", "Privacy"
   ]
   const [count, setCount] = useState(0)
-  // Home: HomeIcon
-  // Profile: AccountBoxIcon or PersonIcon
-  // Messages: MessageIcon or EmailIcon
-  // History: HistoryIcon
-  // Tasks: CheckCircleIcon or AssignmentIcon
-  // Communities: GroupsIcon or PeopleIcon
-  // Settings: SettingsIcon
-  // Support: HelpIcon or LiveHelpIcon
-  // Privacy: PrivacyTipIcon or SecurityIcon
   return (
     <>
       <Grid container >
