@@ -9,19 +9,29 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import HelpIcon from '@mui/icons-material/Help'; // or LiveHelpIcon
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip'; // or SecurityIcon
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import { styled } from '@mui/material/styles'
+import { Grid, Typography as MuiTypography } from "@mui/material"
 
-import { Grid, Typography } from "@mui/material"
+const Typography = styled(MuiTypography)({
+    display: 'flex',
+    alignItems: 'center',
+    '& > svg': {
+        paddingRight: '10px',
+    },
+    paddingBottom: '10px',
+    color: 'white'
+})
 
 function SideBar() {
     return (
         <Grid container direction="column" sx={{ backgroundColor: '#1892d4', height: '100vh' }} gap={4} padding={2}>
             <Grid>
                 <Typography variant="h3">
-                    <DashboardIcon fontSize='10' /> Dashboard
+                    <DashboardIcon sx={{ fontSize: 'inherit' }} /> Dashboard
                 </Typography>
             </Grid>
             <Grid>
-                <Typography sx={{ display: 'flex', alignItems: 'center' }}><HomeIcon sx={{ paddingRight: 1 }} /> Home</Typography>
+                <Typography><HomeIcon /> Home</Typography>
                 <Typography><AccountBoxIcon /> Profile</Typography>
                 <Typography><MessageIcon /> Messages</Typography>
                 <Typography><HistoryIcon /> History</Typography>
