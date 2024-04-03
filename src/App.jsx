@@ -1,8 +1,11 @@
-import { useState } from 'react'
+
 import './App.css'
 import { Grid, Paper } from "@mui/material"
 import { styled } from '@mui/material/styles';
 import SideBar from './SideBar'
+import TopBar from './TopBar'
+import Projects from './Projects'
+import RightSide from './RightSide'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -13,23 +16,25 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function App() {
-  const topUrls = [
-    "Home", "Profile", "Messages", "History", "Tasks", "Communities"]
-  const bottomUrls = [
-    "Settings", "Support", "Privacy"
-  ]
-  const [count, setCount] = useState(0)
   return (
-    <>
-      <Grid container >
-        <Grid item xs={4}>
-          <SideBar />
+    <Grid container >
+      <Grid item xs={4}>
+        <SideBar />
+      </Grid>
+      <Grid item xs={8}>
+        <Grid item xs={12}>
+          <TopBar />
         </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
+        <Grid container>
+          <Grid item xs={7}>
+            <Projects />
+          </Grid>
+          <Grid item xs={5}>
+            <RightSide />
+          </Grid>
         </Grid>
       </Grid>
-    </>
+    </Grid>
   )
 }
 
