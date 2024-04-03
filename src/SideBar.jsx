@@ -10,31 +10,30 @@ import HelpIcon from '@mui/icons-material/Help'; // or LiveHelpIcon
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip'; // or SecurityIcon
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
-import { Box, Typography } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 
 function SideBar() {
     return (
-        <Box style={{ backgroundColor: '#1892d4', height: '100vh' }}>
-            <div>
+        <Grid container direction="column" sx={{ backgroundColor: '#1892d4', height: '100vh' }} gap={4} padding={2}>
+            <Grid>
                 <Typography variant="h3">
                     <DashboardIcon fontSize='10' /> Dashboard
                 </Typography>
-            </div>
-            <div>
-                <p></p>
-                <p><HomeIcon /> Home</p>
-                <p><AccountBoxIcon /> Profile</p>
-                <p><MessageIcon /> Messages</p>
-                <p><HistoryIcon /> History</p>
-                <p><CheckCircleIcon /> Tasks</p>
-                <p><GroupsIcon /> Communities</p>
-            </div>
-            <div>
-                <p><SettingsIcon /> Settings</p>
-                <p><HelpIcon /> Support</p>
-                <p><PrivacyTipIcon /> Privacy</p>
-            </div>
-        </Box>
+            </Grid>
+            <Grid>
+                <Typography sx={{ display: 'flex', alignItems: 'center' }}><HomeIcon sx={{ paddingRight: 1 }} /> Home</Typography>
+                <Typography><AccountBoxIcon /> Profile</Typography>
+                <Typography><MessageIcon /> Messages</Typography>
+                <Typography><HistoryIcon /> History</Typography>
+                <Typography><CheckCircleIcon /> Tasks</Typography>
+                <Typography><GroupsIcon /> Communities</Typography>
+            </Grid>
+            <Grid>
+                <Typography><SettingsIcon /> Settings</Typography>
+                <Typography><HelpIcon /> Support</Typography>
+                <Typography><PrivacyTipIcon /> Privacy</Typography>
+            </Grid>
+        </Grid>
     );
 }
 
