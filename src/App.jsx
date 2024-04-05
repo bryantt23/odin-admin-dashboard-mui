@@ -7,25 +7,15 @@ import TopBar from './TopBar'
 import Projects from './Projects'
 import RightSide from './RightSide'
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
 function App() {
   return (
     <Grid container >
-      <Grid item xs={4}>
+      <Grid item xs={4} sm={3} md={2} >
         <SideBar />
       </Grid>
-      <Grid item xs={8}>
-        <Grid item xs={12}>
-          <TopBar />
-        </Grid>
-        <Grid container>
+      <Grid item xs={8} sm={9} md={10} >
+        <TopBar />
+        <Grid container spacing={2}>
           <Grid item xs={9}>
             <Projects />
           </Grid>

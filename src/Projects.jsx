@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Paper } from "@mui/material"
+import { Grid } from "@mui/material"
 import Project from './Project';
 
 function Projects() {
@@ -37,16 +37,13 @@ function Projects() {
     ];
 
     return (
-        <div>Projects
-
-            <Grid container>
-                {projects.map(project => (
-                    <Grid item key={project.id} xs={12} md={6} lg={3} xl={2}>
-                        <Project project={project} />
-                    </Grid>
-                ))}
-            </Grid>
-        </div>
+        <Grid container>
+            {projects.map(project => (
+                <Grid item key={project.id} xs={12} md={6} lg={3} xl={2}>
+                    <Project project={project} />
+                </Grid>
+            ))}
+        </Grid>
     )
 }
 
