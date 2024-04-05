@@ -26,10 +26,10 @@ function App() {
           <TopBar />
         </Grid>
         <Grid container>
-          <Grid item xs={7}>
+          <Grid item xs={9}>
             <Projects />
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={3}>
             <RightSide />
           </Grid>
         </Grid>
