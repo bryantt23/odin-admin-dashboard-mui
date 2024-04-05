@@ -37,9 +37,10 @@ function Projects() {
     ];
 
     return (
-        <Grid container>
+        <Grid container spacing={1} p={1}>
             {projects.map(project => (
-                <Grid item key={project.id} xs={12} md={6} lg={3} xl={2}>
+                <Grid item key={project.id}
+                    xs={12} md={6} lg={3} xl={2}>
                     <Project project={project} />
                 </Grid>
             ))}

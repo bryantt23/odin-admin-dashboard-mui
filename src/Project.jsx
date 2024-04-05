@@ -8,15 +8,13 @@ function Project({ project }) {
     console.log("🚀 ~ Project ~ project:", project)
     const { title, body } = project
     return (
-        <div>Project
-            <div>
-                <Typography variant="h3">{title}</Typography>
-                <Typography >{body}</Typography>
-                <StarIcon />
-                <VisibilityIcon />
-                <ContentCutIcon />
-            </div>
-        </div>
+        <Grid sx={{ backgroundColor: 'green', height: '100%' }}>
+            <Typography variant="h6">{title}</Typography>
+            <Typography >{body}</Typography>
+            <StarIcon />
+            <VisibilityIcon />
+            <ContentCutIcon />
+        </Grid>
     )
 }
 
