@@ -2,19 +2,21 @@ import React from 'react'
 import StarIcon from '@mui/icons-material/Star';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ContentCutIcon from '@mui/icons-material/ContentCut';
-import { Grid, Typography } from "@mui/material"
+import { Grid, Typography, Box } from "@mui/material"
 
 function Project({ project }) {
     console.log("🚀 ~ Project ~ project:", project)
     const { title, body } = project
     return (
-        <Grid sx={{ backgroundColor: 'green', height: '100%' }}>
+        <Box sx={{ margin: "8px", border: "1px solid red", padding: 2, display: 'flex', flexDirection: 'column' }}>
             <Typography variant="h6">{title}</Typography>
-            <Typography >{body}</Typography>
-            <StarIcon />
-            <VisibilityIcon />
-            <ContentCutIcon />
-        </Grid>
+            <Typography>{body}</Typography>
+            <Box sx={{ mt: 'auto', display: 'flex', justifyContent: 'space-between', p: 1 }}>
+                <StarIcon />
+                <VisibilityIcon />
+                <ContentCutIcon />
+            </Box>
+        </Box>
     )
 }
 

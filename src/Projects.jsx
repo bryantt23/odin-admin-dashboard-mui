@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from "@mui/material"
+import { Box } from "@mui/material"
 import Project from './Project';
 
 function Projects() {
@@ -36,16 +36,21 @@ function Projects() {
         }
     ];
 
+    const gridContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)' },
+        gridAutoRows: '1fr', // Each row has equal height
+        gap: 2, // Adjust spacing between grid items
+        height: '100%',
+    };
+
     return (
-        <Grid container spacing={1} p={1}>
-            {projects.map(project => (
-                <Grid item key={project.id}
-                    xs={12} md={6} lg={3} xl={2}>
-                    <Project project={project} />
-                </Grid>
+        <Box sx={gridContainerStyle}>
+            {projects.map((project) => (
+                <Project key={project.id} project={project} />
             ))}
-        </Grid>
-    )
+        </Box>
+    );
 }
 
 export default Projects
