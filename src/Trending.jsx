@@ -17,7 +17,7 @@ function Trending() {
     return (
         <Grid>
             <Grid item>
-                <Typography variant="h6">Announcements</Typography>
+                <Typography variant="h6">Trending</Typography>
             </Grid>
             {users.map(user => <TrendingUser key={user.id} user={user} />)}
         </Grid>
