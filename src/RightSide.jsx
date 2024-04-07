@@ -5,7 +5,7 @@ import { Box } from "@mui/material"
 
 function RightSide() {
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Box>
             <Announcements />
             <Trending />
         </Box>
