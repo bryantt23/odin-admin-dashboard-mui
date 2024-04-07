@@ -6,9 +6,10 @@ import goldenImage from '../golden.png';
 
 function TopBar() {
     return (
-        <Grid container>
-            <Grid item xs={7} sx={{ backgroundColor: 'yellow', padding: "5px 15px 5px 15px" }}>
+        <Grid container sx={{ backgroundColor: 'white' }} >
+            <Grid item xs={7} sx={{ padding: 2 }}>
                 <TextField
+                    sx={{ backgroundColor: '#e1e8f0' }}
                     variant='outlined'
                     fullWidth
                     InputProps={{
@@ -19,12 +20,12 @@ function TopBar() {
                         )
                     }}></TextField>
             </Grid>
-            <Grid item xs={5} sx={{ backgroundColor: '#90ee90', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Grid item xs={5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <AlarmIcon sx={{ margin: 2 }} />
-                <Avatar src={goldenImage} sx={{ width: 30, height: 30, margin: 2, backgroundColor: 'white', }}></Avatar>
+                <Avatar src={goldenImage} sx={{ width: 30, height: 30, backgroundColor: 'white', }}></Avatar>
                 <Typography sx={{ margin: 2 }}>Morgan Oakley</Typography>
             </Grid>
-            <Grid item xs={6} sx={{ backgroundColor: '#90aa90', display: 'flex', alignItems: 'center', padding: 2 }}>
+            <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center', paddingLeft: 1 }}>
                 <Grid item sx={{ paddingRight: 2 }}>
                     <Avatar src={goldenImage} sx={{ height: 80, width: 80, backgroundColor: 'white', }}></Avatar>
                 </Grid>
@@ -33,7 +34,7 @@ function TopBar() {
                     <Typography variant="h5">Morgan Oakley</Typography>
                 </Grid>
             </Grid>
-            <Grid item xs={6} sx={{ backgroundColor: '#90cc90', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', padding: 5 }}>
+            <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
                 <Button variant="contained" sx={{ borderRadius: 25 }}>New</Button>
                 <Button variant="contained" sx={{ borderRadius: 25 }}>Upload</Button>
                 <Button variant="contained" sx={{ borderRadius: 25 }}>Share</Button>

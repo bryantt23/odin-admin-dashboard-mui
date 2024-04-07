@@ -26,7 +26,7 @@ function SideBar() {
     return (
         <Grid container direction="column" sx={{ backgroundColor: '#1892d4', height: '100vh' }} gap={4} padding={2}>
             <Grid>
-                <Typography variant="h3">
+                <Typography variant="h4">
                     <DashboardIcon sx={{ fontSize: 'inherit' }} /> Dashboard
                 </Typography>
             </Grid>
