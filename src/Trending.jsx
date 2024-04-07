@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography } from "@mui/material"
+import { Grid, Typography, Paper } from "@mui/material"
 import BoltIcon from '@mui/icons-material/Bolt';
 import PetsIcon from '@mui/icons-material/Pets';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
@@ -15,11 +15,13 @@ function Trending() {
     ];
 
     return (
-        <Grid>
+        <Grid paddingTop={2}>
             <Grid item>
                 <Typography variant="h6">Trending</Typography>
             </Grid>
-            {users.map(user => <TrendingUser key={user.id} user={user} />)}
+            <Paper sx={{ marginTop: 2, padding: 2 }}>
+                {users.map(user => <TrendingUser key={user.id} user={user} />)}
+            </Paper>
         </Grid>
     )
 }
