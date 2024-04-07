@@ -45,7 +45,7 @@ function Projects() {
     };
 
     return (
-        <Box>
+        <Box sx={{ padding: 2 }}>
             <Box sx={{ paddingLeft: 2 }}>
                 <Typography variant="h6" gutterBottom>Your Projects</Typography>
             </Box>
