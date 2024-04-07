@@ -1,7 +1,6 @@
 
 import './App.css'
-import { Grid, Paper } from "@mui/material"
-import { styled } from '@mui/material/styles';
+import { Grid, } from "@mui/material"
 import SideBar from './SideBar'
 import TopBar from './TopBar'
 import Projects from './Projects'
