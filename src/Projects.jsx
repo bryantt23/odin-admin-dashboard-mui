@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import Project from './Project';
 
 function Projects() {
@@ -45,10 +45,15 @@ function Projects() {
     };
 
     return (
-        <Box sx={gridContainerStyle}>
-            {projects.map((project) => (
-                <Project key={project.id} project={project} />
-            ))}
+        <Box>
+            <Box sx={{ paddingLeft: 2 }}>
+                <Typography variant="h6" gutterBottom>Your Projects</Typography>
+            </Box>
+            <Box sx={gridContainerStyle}>
+                {projects.map((project) => (
+                    <Project key={project.id} project={project} />
+                ))}
+            </Box>
         </Box>
     );
 }
